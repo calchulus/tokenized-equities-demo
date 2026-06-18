@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Demo app for SEC-compliant tokenized equities (April 2026 regulatory change)",
   "private": true,
-  "homepage": ".",
   "scripts": {
     "install:all": "npm install && cd server && npm install && cd ../client && npm install",
     "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm start\"",
