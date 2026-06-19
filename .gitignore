@@ -4,6 +4,7 @@ server/node_modules/
 contracts/node_modules/
 client/build/
 .env
+server/.env
 data/
 *.log
 .DS_Store

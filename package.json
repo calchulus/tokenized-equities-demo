@@ -9,6 +9,8 @@
     "server": "cd server && npm run dev",
     "client": "cd client && npm start",
     "build": "cd client && npm run build",
+    "test": "cd client && npm test",
+    "test:e2e": "node test-wallet.js",
     "compile": "cd contracts && npx hardhat compile",
     "deploy:local": "cd contracts && npx hardhat run scripts/deploy.js --network localhost",
     "node": "cd contracts && npx hardhat node"

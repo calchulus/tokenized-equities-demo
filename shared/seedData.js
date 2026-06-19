@@ -172,34 +172,6 @@ const SEED_DATA = {
   }
 };
 
-const DB_KEY = 'equitychain_db';
-
-function getDB() {
-  try {
-    const raw = localStorage.getItem(DB_KEY);
-    if (raw) return JSON.parse(raw);
-  } catch (e) {
-    console.error('Failed to parse DB from localStorage');
-  }
-  return null;
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = SEED_DATA;
 }
-
-export function initDB() {
-  if (!getDB()) {
-    saveDB(JSON.parse(JSON.stringify(SEED_DATA)));
-  }
-}
-
-export function resetDB() {
-  saveDB(JSON.parse(JSON.stringify(SEED_DATA)));
-}
-
-export function getDBData() {
-  return getDB() || JSON.parse(JSON.stringify(SEED_DATA));
-}
-
-export function saveDB(data) {
-  localStorage.setItem(DB_KEY, JSON.stringify(data));
-}
-
-export { SEED_DATA };
